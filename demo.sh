@@ -4,14 +4,9 @@ if [ -d $1 ];then
 else 
     mkdir $1
     cd $1
-    echo '<!DOCTYPE>
-<title>Hello</title>
-<h1>Hi</h1>' > index.html
+    echo '<!DOCTYPE>\n<title>Hello</title>\n<h1>Hi</h1>' > index.html
     mkdir css js
-    cd css
-    echo 'h1{color: red;}' > style.css
-    cd ../js
-    echo 'var string = "Hello World"
-alert(string)' > main.js
+    echo 'h1{color: red;}' > css/style.css
+    echo 'var string = "Hello World"\nalert(string)' > js/main.js
     exit 0
 fi
