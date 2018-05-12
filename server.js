@@ -6,13 +6,12 @@ var server=http.createServer(function(request,response){
 	var oUrl=url.parse(path,true);
 	var pathStr=oUrl.pathname;
 	var queryStr='';
-	
-	console.log('请求方式'+request.method);
-	console.log('请求路径'+pathStr);
 	if(path.indexOf('?')>=0){
 		queryStr=path.substring(path.indexOf('?'));
-		console.log('请求参数'+queryStr);
 	}
+	console.log('请求方式'+request.method);
+	console.log('请求路径'+pathStr);
+	console.log('请求参数'+queryStr);
 	
 	if(pathStr=='/'){
 		response.setHeader('Content-Type','text/html; charset=utf-8');
