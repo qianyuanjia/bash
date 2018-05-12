@@ -5,6 +5,7 @@ var server=http.createServer(function(request,response){
 	var path=request.url;
 	var oUrl=url.parse(path,true);
 	var pathStr=oUrl.pathname;
+	var queryStr='';
 	
 	console.log('请求方式'+request.method);
 	console.log('请求路径'+pathStr);
